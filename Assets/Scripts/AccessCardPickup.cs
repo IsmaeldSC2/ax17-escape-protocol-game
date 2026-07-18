@@ -6,7 +6,13 @@ public class AccessCardPickup : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            DoorManager.hasAccessCard = true;
+            DoorManager.collectedCards++;
+
+            Debug.Log(
+                "Cartão coletado! Total: " +
+                DoorManager.collectedCards
+            );
+
             Destroy(gameObject);
         }
     }

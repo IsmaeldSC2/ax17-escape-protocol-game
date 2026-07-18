@@ -1,19 +1,15 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class VictoryUI : MonoBehaviour
+public class MainMenu : MonoBehaviour
 {
-    public void RestartGame()
+    public void StartGame()
     {
         SceneManager.LoadScene("Level01");
     }
 
     public void QuitGame()
     {
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#else
         Application.Quit();
-#endif
     }
 }
